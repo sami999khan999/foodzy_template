@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-border-color: var(--border-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: #ffffff;
+  --foreground: #f4f6fa;
+  --primary: #f53e32;
+  --primary-foreground: #1e1e1e;
+  --secondary: #3bb77e;
+  --muted: #000000;
+  --border-color: #e9e9e9;
+}
+
+.dark {
+  --background: #ffffff;
+  --foreground: #f4f6fa;
+  --primary: #f53e32;
+  --primary-foreground: #1e1e1e;
+  --secondary: #3bb77e;
+  --muted: #000000;
+  --border-color: #e9e9e9;
+}
+
+@layer components {
+  .wrapper {
+    @apply max-w-[1500px] mx-auto px-4 px-16;
+  }
+
+  .wrapperlg {
+    @apply max-w-[1700px] mx-auto px-4 px-16;
+  }
+
+  .title {
+    @apply uppercase text-primary font-medium lg:text-xl text-base tracking-widest;
+  }
+
+  .custom-shadow {
+    box-shadow: 0px 0px 36px -3px rgba(0, 0, 0, 0.1);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  h1 {
+    @apply text-[30px] lg:text-[60px] text-muted font-bold leading-tight;
+  }
+}
+
+::-webkit-scrollbar {
+  @apply w-1;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary;
 }
