@@ -1,22 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
-import Logo from "./Logo";
+import { navLinks } from "@/lib/data";
+import { useState } from "react";
+import { FaRegHeart } from "react-icons/fa";
 import { RiMenu2Fill, RiShoppingCartLine } from "react-icons/ri";
+import { RxPerson } from "react-icons/rx";
+import Logo from "./Logo";
+import NavLink from "./NavLink";
+import Search from "./Search";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "./ui/sheet";
-import { navLinks } from "@/lib/data";
-import NavLink from "./NavLink";
-import Search from "./Search";
-import { RxPerson } from "react-icons/rx";
-import { FaRegHeart } from "react-icons/fa";
 
 const MobileNav = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
@@ -44,8 +42,11 @@ const MobileNav = () => {
           </SheetHeader>
           <div className="flex flex-wrap justify-center items-center gap-3">
             {navLinks.map((item, i) => (
-              <div className="border rounded-full border-border-color px-3 py-1">
-                <NavLink key={i} {...item} />
+              <div
+                key={i}
+                className="border rounded-full border-border-color px-3 py-1"
+              >
+                <NavLink {...item} />
               </div>
             ))}
           </div>
