@@ -11,7 +11,11 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
   --color-border-color: var(--border-color);
+
+  --font-inter: var(--font-inter-sans);
+  --font-quicksand: var(--font-quicksand-sans);
 }
 
 :root {
@@ -21,6 +25,7 @@
   --primary-foreground: #1e1e1e;
   --secondary: #3bb77e;
   --muted: #000000;
+  --muted-foreground: #253d4e;
   --border-color: #e9e9e9;
 }
 
@@ -31,16 +36,17 @@
   --primary-foreground: #1e1e1e;
   --secondary: #3bb77e;
   --muted: #000000;
+  --muted-foreground: #253d4e;
   --border-color: #e9e9e9;
 }
 
 @layer components {
   .wrapper {
-    @apply max-w-[1500px] mx-auto px-4 px-16;
+    @apply max-w-[1500px] mx-auto px-4 lg:px-16;
   }
 
   .wrapperlg {
-    @apply max-w-[1700px] mx-auto px-4 px-16;
+    @apply max-w-[1850px] mx-auto px-4 lg:px-16;
   }
 
   .title {
@@ -53,8 +59,16 @@
 }
 
 @layer base {
+  body {
+    @apply font-inter;
+  }
+
   h1 {
     @apply text-[30px] lg:text-[60px] text-muted font-bold leading-tight;
+  }
+
+  h2 {
+    @apply text-[26px] lg:text-[32px] text-muted-foreground font-bold font-quicksand;
   }
 }
 

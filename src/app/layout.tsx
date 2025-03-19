@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Quicksand } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import MobileNav from "@/components/MobileNav";
 
 const inter = Inter({
   variable: "--font-inter-sans",
+  subsets: ["latin"],
+});
+
+const quicksand = Quicksand({
+  variable: "--font-quicksand-sans",
   subsets: ["latin"],
 });
 
@@ -21,7 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable}  antialiased scroll-smooth`}>
+      <body
+        className={`${inter.variable} ${quicksand.variable}  antialiased scroll-smooth`}
+      >
         <Navbar />
         <MobileNav />
         {children}

@@ -43,7 +43,7 @@ const CustomerFavoriteCart = (item: CustomerFavoriteType) => {
         <p className="lg:text-3xl text-xl text-muted font-semibold">
           {item.title}
         </p>
-        <p className="text-muted/80 text-2xl ">{`(${item.quantity} items)`}</p>
+        <p className="text-muted-foreground/80 font-medium text-2xl ">{`(${item.quantity} items)`}</p>
       </div>
     </div>
   );
