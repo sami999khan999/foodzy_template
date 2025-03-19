@@ -1,7 +1,9 @@
+import { dailyBestSellsData } from "@/lib/data";
 import Image from "next/image";
-import React from "react";
-import { Button } from "./ui/button";
+import { FaRegStar, FaStar } from "react-icons/fa";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { Button } from "./ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -9,9 +11,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
-import { dailyBestSellsData } from "@/lib/data";
-import { FaRegStar, FaStar } from "react-icons/fa";
-import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 const DailyBestSells = () => {
   return (
@@ -42,7 +41,7 @@ const DailyBestSells = () => {
             {dailyBestSellsData.map((item, index) => (
               <CarouselItem
                 key={index}
-                className="pl-4 lg:basis-1/2 xl:basis-1/3 md:basis-1/2 2xl:basis-1/4 lg:w-[278px] w-full"
+                className="lg:basis-1/2 xl:basis-1/3 md:basis-1/2 2xl:basis-1/4  w-full"
               >
                 <DailyBestSellsCard {...item} />
               </CarouselItem>
@@ -71,12 +70,13 @@ type DailyBestSellItem = {
   sold: number;
   seller: string;
   tag: string;
+  tagColor: string;
   image: string;
 };
 
 const DailyBestSellsCard = (item: DailyBestSellItem) => {
   return (
-    <div className="py-4 border border-border-color rounded-2xl flex flex-col justify-center items-center h-[520px] shrink-0">
+    <div className="py-4 border border-border-color rounded-2xl flex flex-col justify-center items-center h-[520px] w-full shrink-0 relative overflow-hidden">
       <div className="relative w-[226px] aspect-square">
         <Image
           src={item.image}
@@ -86,8 +86,14 @@ const DailyBestSellsCard = (item: DailyBestSellItem) => {
         />
       </div>
 
-      {/* Add flex flex-col h-full to enable mt-auto */}
-      <div className="px-4 flex flex-col h-full">
+      <div
+        className={`absolute top-0 left-0 text-sm text-background px-4 py-2 rounded-br-2xl`}
+        style={{ backgroundColor: item.tagColor }}
+      >
+        {item.tag}
+      </div>
+
+      <div className="px-5 w-full flex flex-col h-full">
         <div className="space-y-2">
           <p className="text-primary-foreground/60 text-sm">{item.seller}</p>
           <p className="text-lg text-muted-foreground font-semibold line-clamp-2">
@@ -106,7 +112,6 @@ const DailyBestSellsCard = (item: DailyBestSellItem) => {
           </div>
         </div>
 
-        {/* Price & Button pushed to bottom */}
         <div className="mt-auto space-y-3">
           <div className="flex items-center gap-2 mt-2">
             <p className="text-secondary font-bold text-lg">
@@ -115,7 +120,6 @@ const DailyBestSellsCard = (item: DailyBestSellItem) => {
             <p className="text-gray-400 line-through text-sm">${item.price}</p>
           </div>
           <div>
-            {/* Stock Indicator Line */}
             <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
               <div
                 className="h-full bg-primary"
@@ -125,7 +129,6 @@ const DailyBestSellsCard = (item: DailyBestSellItem) => {
               ></div>
             </div>
 
-            {/* Stock Text */}
             <span className="text-sm text-muted-foreground">
               Sold: {item.sold}/{item.stock}
             </span>

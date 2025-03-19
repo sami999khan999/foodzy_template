@@ -112,6 +112,7 @@ export const dailyBestSellsData = [
     sold: 90,
     seller: "Hodo Foods",
     tag: "Save 35%",
+    tagColor: "#3BB77E", // Direct color value
     image: "/dailyBestSells/1.png",
   },
   {
@@ -123,6 +124,7 @@ export const dailyBestSellsData = [
     sold: 65,
     seller: "Fresh Farms",
     tag: "Save 20%",
+    tagColor: "#67BCEE", // Direct color value
     image: "/dailyBestSells/2.png",
   },
   {
@@ -134,6 +136,7 @@ export const dailyBestSellsData = [
     sold: 30,
     seller: "Ocean Delight",
     tag: "Limited Stock",
+    tagColor: "#F59758", // Direct color value
     image: "/dailyBestSells/3.png",
   },
   {
@@ -145,6 +148,7 @@ export const dailyBestSellsData = [
     sold: 80,
     seller: "NutriChoice",
     tag: "Save 10%",
+    tagColor: "#F74B81", // Direct color value
     image: "/dailyBestSells/4.png",
   },
   {
@@ -156,6 +160,7 @@ export const dailyBestSellsData = [
     sold: 55,
     seller: "Berry Bliss",
     tag: "Fresh Arrival",
+    tagColor: "#3BB77E", // Direct color value
     image: "/dailyBestSells/1.png",
   },
   {
@@ -167,6 +172,7 @@ export const dailyBestSellsData = [
     sold: 25,
     seller: "Prime Cuts",
     tag: "Save 10%",
+    tagColor: "#67BCEE", // Direct color value
     image: "/dailyBestSells/2.png",
   },
   {
@@ -178,6 +184,7 @@ export const dailyBestSellsData = [
     sold: 45,
     seller: "Olive Garden",
     tag: "Best Seller",
+    tagColor: "#F59758", // Direct color value
     image: "/dailyBestSells/3.png",
   },
   {
@@ -189,6 +196,7 @@ export const dailyBestSellsData = [
     sold: 70,
     seller: "Healthy Bites",
     tag: "Top Rated",
+    tagColor: "#F74B81", // Direct color value
     image: "/dailyBestSells/4.png",
   },
 ];

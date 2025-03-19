@@ -207,7 +207,7 @@ function CarouselNext({
     <button
       data-slot="carousel-next"
       className={cn(
-        "absolute size-8 rounded-full cursor-pointer",
+        "absolute rounded-full cursor-pointer",
         orientation === "horizontal"
           ? "top-1/2 -right-12 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
