@@ -114,6 +114,7 @@ export const dailyBestSellsData = [
     tag: "Save 35%",
     tagColor: "#3BB77E", // Direct color value
     image: "/dailyBestSells/1.png",
+    category: "Featured", // Random category
   },
   {
     title: "Organic Hass Avocados",
@@ -126,6 +127,7 @@ export const dailyBestSellsData = [
     tag: "Save 20%",
     tagColor: "#67BCEE", // Direct color value
     image: "/dailyBestSells/2.png",
+    category: "Popular", // Random category
   },
   {
     title: "Fresh Atlantic Salmon Fillet",
@@ -138,6 +140,7 @@ export const dailyBestSellsData = [
     tag: "Limited Stock",
     tagColor: "#F59758", // Direct color value
     image: "/dailyBestSells/3.png",
+    category: "Newly Added", // Random category
   },
   {
     title: "Crunchy Almond Butter",
@@ -150,6 +153,7 @@ export const dailyBestSellsData = [
     tag: "Save 10%",
     tagColor: "#F74B81", // Direct color value
     image: "/dailyBestSells/4.png",
+    category: "Featured", // Random category
   },
   {
     title: "Organic Mixed Berries",
@@ -162,6 +166,7 @@ export const dailyBestSellsData = [
     tag: "Fresh Arrival",
     tagColor: "#3BB77E", // Direct color value
     image: "/dailyBestSells/1.png",
+    category: "Popular", // Random category
   },
   {
     title: "Grass-Fed Beef Ribeye Steak",
@@ -174,6 +179,7 @@ export const dailyBestSellsData = [
     tag: "Save 10%",
     tagColor: "#67BCEE", // Direct color value
     image: "/dailyBestSells/2.png",
+    category: "Newly Added", // Random category
   },
   {
     title: "Cold-Pressed Extra Virgin Olive Oil",
@@ -186,6 +192,7 @@ export const dailyBestSellsData = [
     tag: "Best Seller",
     tagColor: "#F59758", // Direct color value
     image: "/dailyBestSells/3.png",
+    category: "Popular", // Random category
   },
   {
     title: "Gluten-Free Oatmeal Cookies",
@@ -198,5 +205,275 @@ export const dailyBestSellsData = [
     tag: "Top Rated",
     tagColor: "#F74B81", // Direct color value
     image: "/dailyBestSells/4.png",
+    category: "Featured", // Random category
+  },
+  // Additional 8 items
+  {
+    title: "Keto Chocolate Chip Cookies",
+    stars: 5,
+    price: "180.0",
+    priceAfterDiscount: "159.99",
+    stock: 120,
+    sold: 90,
+    seller: "Sugar-Free Delights",
+    tag: "Best Seller",
+    tagColor: "#FF7043", // Direct color value
+    image: "/dailyBestSells/1.png",
+    category: "Newly Added", // Random category
+  },
+  {
+    title: "Organic Grass-Fed Butter",
+    stars: 4,
+    price: "225.0",
+    priceAfterDiscount: "199.99",
+    stock: 50,
+    sold: 30,
+    seller: "Green Farms",
+    tag: "Save 15%",
+    tagColor: "#FFEB3B", // Direct color value
+    image: "/dailyBestSells/2.png",
+    category: "Popular", // Random category
+  },
+  {
+    title: "Wild-Caught Shrimp",
+    stars: 5,
+    price: "320.0",
+    priceAfterDiscount: "299.99",
+    stock: 70,
+    sold: 50,
+    seller: "Seafood Delight",
+    tag: "Fresh Arrival",
+    tagColor: "#FFC107", // Direct color value
+    image: "/dailyBestSells/3.png",
+    category: "Featured", // Random category
+  },
+  {
+    title: "Spicy Organic Salsa",
+    stars: 4,
+    price: "99.99",
+    priceAfterDiscount: "85.99",
+    stock: 150,
+    sold: 120,
+    seller: "Hot & Spicy",
+    tag: "Top Rated",
+    tagColor: "#FF5722", // Direct color value
+    image: "/dailyBestSells/4.png",
+    category: "Popular", // Random category
+  },
+  {
+    title: "Premium Aged Balsamic Vinegar",
+    stars: 5,
+    price: "400.0",
+    priceAfterDiscount: "349.99",
+    stock: 30,
+    sold: 20,
+    seller: "Italian Delights",
+    tag: "Limited Stock",
+    tagColor: "#9C27B0", // Direct color value
+    image: "/dailyBestSells/1.png",
+    category: "Newly Added", // Random category
+  },
+  {
+    title: "Almond Flour Pancake Mix",
+    stars: 4,
+    price: "150.0",
+    priceAfterDiscount: "129.99",
+    stock: 100,
+    sold: 85,
+    seller: "Purely Healthy",
+    tag: "Save 25%",
+    tagColor: "#FF9800", // Direct color value
+    image: "/dailyBestSells/2.png",
+    category: "Featured", // Random category
+  },
+  {
+    title: "Organic Coconut Water",
+    stars: 5,
+    price: "120.0",
+    priceAfterDiscount: "109.99",
+    stock: 80,
+    sold: 65,
+    seller: "Nature's Best",
+    tag: "Best Seller",
+    tagColor: "#4CAF50", // Direct color value
+    image: "/dailyBestSells/3.png",
+    category: "Popular", // Random category
+  },
+  {
+    title: "Vegan Protein Powder",
+    stars: 4,
+    price: "250.0",
+    priceAfterDiscount: "229.99",
+    stock: 60,
+    sold: 45,
+    seller: "Protein Labs",
+    tag: "Fresh Arrival",
+    tagColor: "#8BC34A", // Direct color value
+    image: "/dailyBestSells/4.png",
+    category: "Featured", // Random category
+  },
+  {
+    title: "Chia Seed Pudding",
+    stars: 5,
+    price: "135.0",
+    priceAfterDiscount: "119.99",
+    stock: 90,
+    sold: 75,
+    seller: "Healthy Bites",
+    tag: "Top Rated",
+    tagColor: "#9E9E9E", // Direct color value
+    image: "/dailyBestSells/1.png",
+    category: "Newly Added", // Random category
+  },
+  {
+    title: "Superfood Smoothie Mix",
+    stars: 4,
+    price: "280.0",
+    priceAfterDiscount: "249.99",
+    stock: 110,
+    sold: 95,
+    seller: "Smoothie Bliss",
+    tag: "Best Seller",
+    tagColor: "#607D8B", // Direct color value
+    image: "/dailyBestSells/2.png",
+    category: "Popular", // Random category
+  },
+  {
+    title: "Gluten-Free Pizza Crust",
+    stars: 5,
+    price: "175.0",
+    priceAfterDiscount: "159.99",
+    stock: 130,
+    sold: 110,
+    seller: "Baker's Delight",
+    tag: "Save 30%",
+    tagColor: "#FFC107", // Direct color value
+    image: "/dailyBestSells/3.png",
+    category: "Featured", // Random category
+  },
+];
+
+export const dailyBestSellsCategory: (
+  | "featured"
+  | "popular"
+  | "newly added"
+)[] = ["featured", "popular", "newly added"];
+
+export const specialDishesData = [
+  {
+    title: "Fattoush salad",
+    subtitle: "Description of the item",
+    isFavorite: true,
+    image: "/specialDishes/1.png",
+  },
+  {
+    title: "Grilled Chicken Shawarma",
+    subtitle: "Juicy grilled chicken with spices",
+    isFavorite: false,
+    image: "/specialDishes/2.png",
+  },
+  {
+    title: "Falafel Plate",
+    subtitle: "Crispy chickpea fritters with tahini",
+    isFavorite: false,
+    image: "/specialDishes/3.png",
+  },
+  {
+    title: "Hummus with Pita",
+    subtitle: "Smooth hummus served with warm pita bread",
+    isFavorite: false,
+    image: "/specialDishes/1.png",
+  },
+  {
+    title: "Stuffed Grape Leaves",
+    subtitle: "Grape leaves filled with rice and herbs",
+    isFavorite: false,
+    image: "/specialDishes/2.png",
+  },
+  {
+    title: "Lamb Kofta",
+    subtitle: "Spiced ground lamb skewers grilled to perfection",
+    isFavorite: false,
+    image: "/specialDishes/3.png",
+  },
+  {
+    title: "Mujadara",
+    subtitle: "Rice and lentils topped with crispy onions",
+    isFavorite: false,
+    image: "/specialDishes/1.png",
+  },
+  {
+    title: "Tabbouleh Salad",
+    subtitle: "Fresh parsley, tomato, and bulgur salad",
+    isFavorite: false,
+    image: "/specialDishes/2.png",
+  },
+  {
+    title: "Baklava",
+    subtitle: "Sweet, flaky pastry filled with nuts and honey",
+    isFavorite: true,
+    image: "/specialDishes/3.png",
+  },
+  {
+    title: "Shish Tawook",
+    subtitle: "Grilled chicken skewers marinated with yogurt and spices",
+    isFavorite: false,
+    image: "/specialDishes/1.png",
+  },
+];
+
+export const dealsOfTheDayData = [
+  {
+    title: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
+    seller: "NestFood",
+    price: 33.8,
+    priceAfterDiscount: 32.85,
+    image: "/DealsOfTheDay/1.png",
+    stars: 4,
+  },
+  {
+    title: "Perdue Simply Smart Organics Gluten Free",
+    seller: "Old El Paso",
+    price: 26.8,
+    priceAfterDiscount: 24.85,
+    image: "/DealsOfTheDay/2.png",
+    stars: 5,
+  },
+  {
+    title: "Signature Wood-Fired Mushroom and Caramelized",
+    seller: "Progresso",
+    price: 13.8,
+    priceAfterDiscount: 12.85,
+    image: "/DealsOfTheDay/3.png",
+    stars: 3,
+  },
+  {
+    title: "Simply Lemonade with Raspberry Juice",
+    seller: "Yoplait",
+    price: 16.8,
+    priceAfterDiscount: 15.85,
+    image: "/DealsOfTheDay/4.png",
+    stars: 5,
+  },
+];
+
+export const faqData = [
+  {
+    title: "Convenient and Reliable",
+    describe:
+      "Whether you dine in, take out, or order delivery, our service is convenient, fast, and reliable, making mealtime hassle-free.",
+    image: "/WhyPeopleChooseUs/convenient.png",
+  },
+  {
+    title: "Variety of Options",
+    describe:
+      "From hearty meals to light snacks, we offer a wide range of options to suit every taste and craving.",
+    image: "/WhyPeopleChooseUs/variety.png",
+  },
+  {
+    title: "Eat Burger",
+    describe:
+      "Our burgers are grilled to perfection, with juicy patties and flavorful toppings that make every bite a delicious experience.",
+    image: "/WhyPeopleChooseUs/eat-burger.png",
   },
 ];

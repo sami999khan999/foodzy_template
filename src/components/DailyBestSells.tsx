@@ -1,4 +1,6 @@
-import { dailyBestSellsData } from "@/lib/data";
+"use client";
+
+import { dailyBestSellsCategory, dailyBestSellsData } from "@/lib/data";
 import Image from "next/image";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
@@ -11,11 +13,36 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 const DailyBestSells = () => {
+  const [beseSellsCategory, setBestSellsCategory] = useState<
+    "featured" | "popular" | "newly added"
+  >("featured");
+
+  const filteredByCategory = dailyBestSellsData.filter(
+    (item) => item.category.toLowerCase() === beseSellsCategory
+  );
+
   return (
     <div className="wrapperlg space-y-10">
-      <h2>Daily Best Sells</h2>
+      <div className="flex justify-between items-center">
+        <h2>Daily Best Sells</h2>
+        <div className="flex gap-3">
+          {dailyBestSellsCategory.map((item, i) => (
+            <div
+              key={i}
+              className={cn("text-muted-foreground capitalize cursor-pointer", {
+                "text-secondary": beseSellsCategory === item.toLowerCase(),
+              })}
+              onClick={() => setBestSellsCategory(item)}
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="flex flex-col lg:flex-row justify-between gap-6 overflow-x-hidden ">
         <div className="relative h-[520px] lg:w-[378px] w-full rounded-xl overflow-hidden shrink-0">
           <Image
@@ -36,9 +63,9 @@ const DailyBestSells = () => {
           </div>
         </div>
 
-        <Carousel className="2xl:w-[75%] lg:w-[65%]  w-full ">
-          <CarouselContent className="">
-            {dailyBestSellsData.map((item, index) => (
+        <Carousel className="2xl:w-[75%] lg:w-[65%] w-full">
+          <CarouselContent>
+            {filteredByCategory.map((item, index) => (
               <CarouselItem
                 key={index}
                 className="lg:basis-1/2 xl:basis-1/3 md:basis-1/2 2xl:basis-1/4  w-full"
@@ -47,10 +74,10 @@ const DailyBestSells = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute p-3 left-9 bg-foreground border-border-color">
+          <CarouselPrevious className="absolute h-10 aspect-square flex items-center justify-center shadow-2xl hover:h-16 duration-100 text-xl left-9 bg-secondary text-foreground border-border-color disabled:bg-foreground disabled:text-muted border ">
             <FaArrowLeftLong />
           </CarouselPrevious>
-          <CarouselNext className="absolute p-3 right-9 bg-foreground border-border-color">
+          <CarouselNext className="absolute h-10 aspect-square flex items-center justify-center shadow-2xl hover:h-16 duration-100 text-xl right-9 bg-secondary text-foreground border-border-color  disabled:bg-foreground disabled:text-muted border ">
             <FaArrowRightLong />
           </CarouselNext>
         </Carousel>
@@ -72,6 +99,7 @@ type DailyBestSellItem = {
   tag: string;
   tagColor: string;
   image: string;
+  category: string;
 };
 
 const DailyBestSellsCard = (item: DailyBestSellItem) => {

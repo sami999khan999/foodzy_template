@@ -49,8 +49,12 @@
     @apply max-w-[1850px] mx-auto px-4 lg:px-16;
   }
 
+  .wrappermd {
+    @apply max-w-[1650px] mx-auto px-4 lg:px-16;
+  }
+
   .title {
-    @apply uppercase text-primary font-medium lg:text-xl text-base tracking-widest;
+    @apply uppercase text-primary font-semibold lg:text-xl text-base tracking-widest;
   }
 
   .custom-shadow {
@@ -60,7 +64,7 @@
 
 @layer base {
   body {
-    @apply font-inter;
+    @apply font-inter bg-[#FFFFFF];
   }
 
   h1 {
