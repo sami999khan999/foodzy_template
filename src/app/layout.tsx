@@ -3,6 +3,7 @@ import { Inter, Quicksand } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import MobileNav from "@/components/MobileNav";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
         <Navbar />
         <MobileNav />
         {children}
+        <Footer />
       </body>
     </html>
   );

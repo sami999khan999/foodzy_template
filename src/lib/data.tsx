@@ -7,7 +7,11 @@ import {
   FaBreadSlice,
   FaCoffee,
   FaCookie,
+  FaInstagram,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { IoBasketballOutline } from "react-icons/io5";
+import { RiFacebookLine } from "react-icons/ri";
 
 export const navLinks = [
   {
@@ -477,3 +481,121 @@ export const faqData = [
     image: "/WhyPeopleChooseUs/eat-burger.png",
   },
 ];
+
+export const services = [
+  {
+    title: "Best prices & offers",
+    subTitle: "Orders $50 or more",
+    image: "/services/1.png",
+  },
+  {
+    title: "Free delivery",
+    subTitle: "24/7 amazing services",
+    image: "/services/2.png",
+  },
+  {
+    title: "Great daily deal",
+    subTitle: "When you sign up",
+    image: "/services/3.png",
+  },
+  {
+    title: "Wide assortment",
+    subTitle: "Mega Discounts",
+    image: "/services/4.png",
+  },
+  {
+    title: "Easy returns",
+    subTitle: "Within 30 days",
+    image: "/services/5.png",
+  },
+];
+
+export const footerData = {
+  description:
+    "FoodTrove is the biggest market of grocery products. Get your daily needs from our store.",
+  location:
+    "51 Green St.Huntington ohaio beach ontario, NY 11746 KY 4783, USA.",
+  email: "example@email.com",
+  phone: "+91 123 4567890",
+
+  company: [
+    {
+      name: "About Us",
+      path: "/",
+    },
+    {
+      name: "Delivery Information",
+      path: "/",
+    },
+    {
+      name: "Privacy Policy",
+      path: "/",
+    },
+    {
+      name: "Terms & Conditions",
+      path: "/",
+    },
+    {
+      name: "contact Us",
+      path: "/",
+    },
+    {
+      name: "Support Center",
+      path: "/",
+    },
+  ],
+
+  category: [
+    {
+      name: "Dairy & Bakery",
+      path: "/",
+    },
+    {
+      name: "Fruits & Vegetable",
+      path: "/",
+    },
+    {
+      name: "Snack & Spice",
+      path: "/",
+    },
+    {
+      name: "Juice & Drinks",
+      path: "/",
+    },
+    {
+      name: "Chicken & Meat",
+      path: "/",
+    },
+    {
+      name: "Fast Food",
+      path: "/",
+    },
+  ],
+
+  socialmedia: [
+    {
+      logo: <RiFacebookLine />,
+      path: "/",
+    },
+    {
+      logo: <FaXTwitter />,
+      path: "/",
+    },
+    {
+      logo: <IoBasketballOutline />,
+      path: "/",
+    },
+    {
+      logo: <FaInstagram />,
+      path: "/",
+    },
+  ],
+
+  images: [
+    "/footer/1.png",
+    "/footer/2.png",
+    "/footer/3.png",
+    "/footer/4.png",
+    "/footer/5.png",
+  ],
+};

@@ -2,6 +2,7 @@ import CustomerFavorites from "@/components/CustomerFavorites";
 import DailyBestSells from "@/components/DailyBestSells";
 import DealsOfTheDay from "@/components/DealsOfTheDay";
 import SpecialDishes from "@/components/SpecialDishes";
+import Subscribe from "@/components/Subscribe";
 import WhyPeopleChooseUs from "@/components/WhyPeopleChooseUs";
 import React from "react";
 
@@ -13,6 +14,7 @@ const page = () => {
       <SpecialDishes />
       <DealsOfTheDay />
       <WhyPeopleChooseUs />
+      <Subscribe />
     </div>
   );
 };
