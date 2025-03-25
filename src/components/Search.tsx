@@ -21,20 +21,20 @@ const Search = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center h-12">
-      <div className="border border-secondary/50 flex items-center rounded-sm lg:border-r-0 lg:rounded-l-md h-full">
+    <div className="flex flex-col lg:flex-row items-center lg:h-12">
+      <div className="lg:border lg:border-r-0 border-secondary/50 flex flex-col gap-2 lg:gap-0 lg:flex-row items-center rounded-sm lg:rounded-l-md lg:rounded-r-none h-full">
         <input
           type="text"
           placeholder="Search for recipes..."
-          className="w-full lg:w-[20rem] outline-0 px-4"
+          className="w-full lg:w-[20rem] outline-0 px-4 border lg:border-none border-secondary py-1 rounded-sm lg:rounded-none"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
 
-        <div className="border-l border-secondary/50 h-full"></div>
+        <div className="hidden lg:block border-l border-secondary/50 h-full"></div>
 
         <Select onValueChange={(value) => setSelectedCategory(value)}>
-          <SelectTrigger className="2xl:w-40 w-full md:w-28 border-none shadow-none rounded-r-md">
+          <SelectTrigger className="2xl:w-40 border lg:border-none border-secondary rounded-sm w-full md:w-28 shadow-none">
             <SelectValue placeholder="Select Category" />
           </SelectTrigger>
           <SelectContent className="border border-border-color bg-background">

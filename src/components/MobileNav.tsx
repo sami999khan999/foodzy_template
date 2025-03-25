@@ -23,8 +23,8 @@ const MobileNav = () => {
   const handleCloseSheet = () => setIsSheetOpen(false);
 
   return (
-    <div>
-      <div className="lg:hidden bg-foreground/30 shadow-md flex justify-between items-center px-2">
+    <div className="lg:hidden">
+      <div className="bg-foreground/30 shadow-md flex justify-between items-center px-2">
         <Logo />
         <div
           className="border border-border-color p-1 w-fit rounded-sm"
@@ -35,7 +35,6 @@ const MobileNav = () => {
       </div>
 
       <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-        <SheetTrigger />
         <SheetContent className="text-muted px-2">
           <SheetHeader>
             <Logo />

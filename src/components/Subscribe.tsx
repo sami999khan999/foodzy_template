@@ -19,14 +19,14 @@ const Subscribe = () => {
           <h2 className="text-foreground lg:w-[40rem] w-full text-center lg:text-left text-[40px]">
             Stay home & get your daily needs from our shop
           </h2>
-          <div className="text-lg text-foreground/60 flex gap-2.5 items-center justify-center lg:justify-start">
+          <div className="lg:text-lg text-foreground/60 flex lg:gap-2.5 gap-1 items-center justify-center lg:justify-start">
             <p>{`${"Start You'r Daily Shopping with"}`}</p>
             <Link href={"/"} className="text-secondary hover:underline">
               Nest Mart
             </Link>
           </div>
-          <div className="bg-background lg:w-[30rem] flex items-center justify-between h-16 rounded-full lg:px-[2rem] px-4">
-            <div className="flex items-center gap-4">
+          <div className="bg-background lg:w-[30rem] w-full flex gap-2 items-center justify-between lg:h-16 h-12 rounded-full lg:px-[2rem] px-4">
+            <div className="flex items-center gap-4 w-[60%]">
               <GrSend className="text-muted-foreground/50 text-xl" />
               <input
                 type="text"
@@ -34,12 +34,12 @@ const Subscribe = () => {
                 placeholder="Your E-mail Address"
               />
             </div>
-            <Button className="h-full lg:px-10 rounded-full bg-primary/80 text-foreground font-semibold text-base tracking-wider">
+            <Button className="h-full w-[40%] lg:px-10 rounded-full bg-primary/80 text-foreground font-semibold lg:text-base text-xs tracking-wider">
               Subscribe
             </Button>
           </div>
         </div>
-        <div className="relative md:w-[634px] w-full h-[345px]">
+        <div className="relative md:w-[634px] w-full h-[345px] bg-white">
           <Image
             src={"/subscribe.png"}
             objectFit="contain"

@@ -12,7 +12,7 @@ import { RiShoppingCartLine } from "react-icons/ri";
 const Navbar = () => {
   return (
     <nav className="hidden lg:block">
-      <div className="bg-background py-4 shadow-md">
+      <div className="py-4 shadow-md">
         <div className="wrapper flex justify-between items-center">
           <div className="border border-border-color p-1 w-fit rounded-sm">
             <RiMenu2Fill size={25} />
@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="bg-foreground/30 sticky top-0 z-50">
+      <div className="bg-foreground/10 sticky top-0 z-50 mb-0">
         <div className="wrapper py-2 flex gap-3 items-center justify-between">
           <Logo />
           <Search />

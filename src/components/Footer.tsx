@@ -35,10 +35,10 @@ export default Footer;
 
 const FooterMain = () => {
   return (
-    <div className="text-muted/50 space-y-4">
-      <div className="mb-7">
+    <div className="text-muted/50 space-y-4  flex flex-col items-center lg:items-start w-full text-center lg:text-left">
+      <div className="mb-7 w-full flex items-center lg:items-start flex-col text-left">
         <Logo />
-        <p>{footerData.description}</p>
+        <p className="text-center">{footerData.description}</p>
       </div>
       <div className="flex item gap-3">
         <TiLocationOutline className="text-primary shrink-0" size={25} />
