@@ -8,13 +8,7 @@ import { RxPerson } from "react-icons/rx";
 import Logo from "./Logo";
 import NavLink from "./NavLink";
 import Search from "./Search";
-import {
-  Sheet,
-  SheetContent,
-  SheetFooter,
-  SheetHeader,
-  SheetTrigger,
-} from "./ui/sheet";
+import { Sheet, SheetContent, SheetFooter, SheetHeader } from "./ui/sheet";
 
 const MobileNav = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
