@@ -601,40 +601,6 @@ export const footerData = {
   ],
 };
 
-export const productFilterData: ProductFilterDataType = {
-  categories: [
-    { id: 1, name: "Juice & Drinks", quantity: 34 },
-    { id: 2, name: "Dairy & Milk", quantity: 34 },
-    { id: 3, name: "Snake & Spice", quantity: 34 },
-  ],
-
-  priceRange: {
-    from: 20,
-    to: 250,
-  },
-
-  colorCategory: [
-    { id: 1, name: "Blue", value: "#6C9EFF" },
-    { id: 2, name: "Yellow", value: "#DEDE44" },
-    { id: 3, name: "Red", value: "#FB5555" },
-  ],
-
-  weightCategory: [
-    { id: 1, value: "2", unit: "kg" },
-    { id: 2, value: "20", unit: "kg" },
-    { id: 3, value: "30", unit: "kg" },
-  ],
-
-  categoryTags: [
-    { id: 1, name: "vegetables" },
-    { id: 2, name: "juice" },
-    { id: 3, name: "food" },
-    { id: 4, name: "dry fruits" },
-    { id: 5, name: "vegetables" },
-    { id: 6, name: "juice" },
-  ],
-};
-
 export const productData = [
   {
     id: 1,
@@ -937,6 +903,56 @@ export const productData = [
     image: "/product/2.png",
   },
 ];
+
+export const productFilterData: ProductFilterDataType = {
+  categories: [
+    {
+      id: 1,
+      name: "Juice & Drinks",
+      quantity: productData.filter(
+        (product) => product.category === "Juice & Drinks"
+      ).length,
+    },
+    {
+      id: 2,
+      name: "Dairy & Milk",
+      quantity: productData.filter(
+        (product) => product.category === "Dairy & Milk"
+      ).length,
+    },
+    {
+      id: 3,
+      name: "Snake & Spice",
+      quantity: productData.filter(
+        (product) => product.category === "Snake & Spice"
+      ).length,
+    },
+  ],
+
+  priceRange: {
+    min: 20,
+    max: 250,
+  },
+
+  colorCategory: [
+    { id: 1, name: "Blue", value: "#6C9EFF" },
+    { id: 2, name: "Yellow", value: "#DEDE44" },
+    { id: 3, name: "Red", value: "#FB5555" },
+  ],
+
+  weightCategory: [
+    { id: 1, value: "2kg" },
+    { id: 2, value: "20kg" },
+    { id: 3, value: "30kg" },
+  ],
+
+  categoryTags: [
+    { id: 1, name: "vegetables" },
+    { id: 2, name: "juice" },
+    { id: 3, name: "food" },
+    { id: 4, name: "dry fruits" },
+  ],
+};
 
 export const productDetailsData = [
   {

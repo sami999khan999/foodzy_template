@@ -5,8 +5,8 @@ export type CategoryType = {
 };
 
 export type PriceRangeType = {
-  from: number;
-  to: number;
+  min: number;
+  max: number;
 };
 
 export type ColorCategoryType = {
@@ -18,7 +18,6 @@ export type ColorCategoryType = {
 export type WeightCategoryType = {
   id: number;
   value: string;
-  unit: string;
 };
 
 export type TagType = {
@@ -33,3 +32,21 @@ export type ProductFilterDataType = {
   weightCategory: WeightCategoryType[];
   categoryTags: TagType[];
 };
+
+interface Product {
+  id: number;
+  title: string;
+  tag: string;
+  price: number;
+  priceAfterDiscount: number;
+  stars: number;
+  weight: {
+    value: number;
+    unit: string;
+  };
+  color: string;
+  category: string;
+  image: string;
+}
+
+export type ProductData = Product[];

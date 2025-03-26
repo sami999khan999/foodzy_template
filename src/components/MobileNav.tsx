@@ -13,16 +13,13 @@ import { Sheet, SheetContent, SheetFooter, SheetHeader } from "./ui/sheet";
 const MobileNav = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
-  const handleOpenSheet = () => setIsSheetOpen(true);
-  const handleCloseSheet = () => setIsSheetOpen(false);
-
   return (
     <div className="lg:hidden">
       <div className="bg-foreground/30 shadow-md flex justify-between items-center px-2">
         <Logo />
         <div
           className="border border-border-color p-1 w-fit rounded-sm"
-          onClick={handleOpenSheet}
+          onClick={() => setIsSheetOpen(true)}
         >
           <RiMenu2Fill size={25} />
         </div>
@@ -61,7 +58,10 @@ const MobileNav = () => {
             </div>
           </div>
           <SheetFooter>
-            <button onClick={handleCloseSheet} className="text-primary">
+            <button
+              onClick={() => setIsSheetOpen(false)}
+              className="text-primary"
+            >
               Close
             </button>
           </SheetFooter>

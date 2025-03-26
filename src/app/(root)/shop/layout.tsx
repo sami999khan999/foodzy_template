@@ -5,7 +5,7 @@ import React from "react";
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="lg:flex wrapper lg:my-[6rem] my-10 gap-8">
-      <div className="hidden lg:block w-[20%]">
+      <div className="hidden lg:block w-[23%]">
         <FilterMenu />
       </div>
       <FilterMenuMobile>

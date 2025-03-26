@@ -16,6 +16,7 @@
 
   --font-inter: var(--font-inter-sans);
   --font-quicksand: var(--font-quicksand-sans);
+  --font-poppins: var(--font-poppins-sans);
 }
 
 :root {
@@ -82,4 +83,21 @@
 
 ::-webkit-scrollbar-thumb {
   @apply bg-primary;
+}
+
+input[type="range"] {
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 14px;
+  width: 14px;
+  background: var(--primary);
+  border-radius: 50%;
+  cursor: pointer;
 }
